@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <title>Урок 3 - javascript-3 </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="js/regexp.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="page-header">
+                    <h1>Урок номер 3 - Javascript-3</h1>
+                </div>
+                <div>1. Напишите регулярное выражение для поиска HTML-цвета, заданного как #ABCDEF или #000, то есть # и содержит затем 6 шестнадцатеричных символов (либо 3).</div>
+                <form name="form1" id="form1" class="form-inline" role="form">
+                    <div class="form-group">
+                        <label for="userEntryColor" class="col-sm-5 control-label">Введите цвет:</label>
+                        <div class="col-sm-7">
+                            <input type="text" class="form-control" id="userEntryColor">
+                        </div>
+                    </div>
+                    <button type="button" name="checkColor" class="btn btn-default" id="checkColor">Проверить цвет</button>
+                    <button type="reset" class="btn btn-default" >Очистить данные</button>
+                </form>
+                <div id="resultColor" class="result"></div>
+
+                <div>2. Создайте регэксп, который ищет все положительные числа, в том числе и с десятичной точкой. Например, var str = "-1.5 0 12 123.4."</div>
+                <form name="form2" id="form2" class="form-inline" role="form">
+                    <div class="form-group">
+                        <label for="userEntryStrNum" class="col-sm-6 control-label">Введите набор чисел:</label>
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" id="userEntryStrNum">
+                        </div>
+                    </div>
+                    <button type="button" name="checkStrNum" class="btn btn-default" id="checkStrNum">Получить все числа</button>
+                    <button type="reset" class="btn btn-default" >Очистить данные</button>
+                </form>
+                <div id="resultStrNum" class="result"></div>
+
+                <div>3. Время может быть в формате часы:минуты или часы-минуты. И часы и минуты состоят из двух цифр, например 09:00, 21-30. Напишите регулярное выражение для поиска времени</div>
+                <form name="form3" id="form3" class="form-inline" role="form">
+                    <div class="form-group">
+                        <label for="userEntryTime" class="col-sm-5 control-label">Введите время:</label>
+                        <div class="col-sm-7">
+                            <input type="text" class="form-control" id="userEntryTime">
+                        </div>
+                    </div>
+                    <button type="button" name="checkTime" class="btn btn-default" id="checkTime">Проверить время</button>
+                    <button type="reset" class="btn btn-default" >Очистить данные</button>
+                </form>
+                <div id="resultTime" class="result"></div>
+
+                <div>4. Написать проверку правильности координаты в файле инициализации шахматной доски c помощью регулярного выражения. Он должен иметь формат вида A6.</div>
+                <pre>
+         <code>
+function ifSah(x) {
+   var reCheck = /([a-f][1-8]){1}/i ;
+   if(reCheck.test(x))
+      return true;
+   else
+      return false; 
+}
+        </code>
+       </pre>
+
+                <div>5. Написать регулярные выражения для следующих сущностей: номер телефона в формате +7(965)-123-45-67, email, серии и номера паспорта. Применить написанные регулярные выражения необходимо для валидации произвольной формы, в которой обязательно должны присутствовать описанные выше поля. Поля, которые проходят валидацию подсветить зеленым, остальные – красным. </div>
+                <form name="form4" id="form4">
+                    <fieldset>
+                        <legend>Проверочная форма</legend>
+                        <div class="form-group">
+                            <label for="userTelNumber" class="col-sm-3 control-label">Номер телефона:</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="userTelNumber">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="userEmail" class="col-sm-3 control-label">E-mail:</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="userEmail">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="checkPassport" class="col-sm-3 control-label">Серия и номер паспорта:</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="checkPassport">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-3 col-sm-9">
+                                <button type="button" name="checkAll" class="btn btn-default" id="checkAll">Проверить данные</button>
+                                <button type="reset" class="btn btn-default" >Очистить данные</button>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
