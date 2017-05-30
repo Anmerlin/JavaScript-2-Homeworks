@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/font.css">
+    <script src="js/clock.js" defer></script>
+    <script src="js/vote.js" defer></script>
+</head>
+
+<body>
+    <div>
+       <h3>Часы</h3>
+        <div id="clock" class="clock">
+            <span class="hour">00</span>:<span class="min">00</span>:<span class="sec">00</span>
+        </div>
+
+        <input type="button" id="start" value="Старт">
+        <input type="button" id="stop" value="Стоп">
+        <input type="button" id="alert" value="Alert для проверки возобновления">
+    </div>
+    <div>
+        <h3>Голосование</h3>
+        <div id="voting" class="voting">
+            <span class="down">-</span>
+            <span class="vote">0</span>
+            <span class="up">+</span>
+        </div>
+    </div>
+</body>
+
+</html>

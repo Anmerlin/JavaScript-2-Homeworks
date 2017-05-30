@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'digital';
+    src: url('../fonts/digital.woff2') format('woff2'),
+         url('../fonts/digital.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}

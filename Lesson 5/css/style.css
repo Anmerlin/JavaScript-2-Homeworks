@@ -1,0 +1,28 @@
+.clock {
+    font-family: "digital";
+    font-size: 50px;
+}
+
+.hour {
+    color: green;
+}
+
+.min {
+    color: blue;
+}
+
+.sec {
+    color: red;
+}
+
+.voting {
+    font-family: Verdana;
+    font-size: 20px;
+}
+
+.up,
+.down {
+    cursor: pointer;
+    color: orange;
+    font-weight: bold;
+}
